@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "author": "Kelly Barbosa",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-esp32-devkit-v1", "id": "esp", "top": 0, "left": 0, "attrs": {} },
+    { "type": "wokwi-potentiometer", "id": "pot2", "top": -0.55, "left": -86.1, "attrs": {} }
+  ],
+  "connections": [
+    [ "esp:TX0", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX0", "$serialMonitor:TX", "", [] ],
+    [ "esp:GND.1", "led-red:C", "black", [] ],
+    [ "esp:GND.1", "led-green:C", "black", [] ],
+    [ "esp:GND.1", "led-blue:C", "black", [] ],
+    [ "esp:D5", "led-red:A", "purple", [] ],
+    [ "esp:D2", "led-green:A", "blue", [] ],
+    [ "esp:D4", "led-blue:A", "green", [] ],
+    [ "pot2:SIG", "esp:D33", "green", [ "v0" ] ],
+    [ "pot2:GND", "esp:GND.2", "black", [ "v0" ] ],
+    [ "pot2:VCC", "esp:VIN", "red", [ "v0" ] ]
+  ],
+  "dependencies": {}
+}

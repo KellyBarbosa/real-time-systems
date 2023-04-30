@@ -1,0 +1,92 @@
+{
+  "version": 1,
+  "author": "Kelly Barbosa",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "wokwi-esp32-devkit-v1",
+      "id": "esp",
+      "top": 0,
+      "left": 0,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led-red",
+      "top": -3.6,
+      "left": 120,
+      "attrs": {
+        "color": "yellow"
+      }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led-green",
+      "top": -3.6,
+      "left": 177.6,
+      "attrs": {
+        "color": "cyan"
+      }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led-blue",
+      "top": -3.6,
+      "left": 148.8,
+      "attrs": {
+        "color": "purple"
+      }
+    }
+  ],
+  "connections": [
+    [
+      "esp:TX0",
+      "$serialMonitor:RX",
+      "",
+      []
+    ],
+    [
+      "esp:RX0",
+      "$serialMonitor:TX",
+      "",
+      []
+    ],
+    [
+      "esp:GND.1",
+      "led-red:C",
+      "black",
+      []
+    ],
+    [
+      "esp:GND.1",
+      "led-green:C",
+      "black",
+      []
+    ],
+    [
+      "esp:GND.1",
+      "led-blue:C",
+      "black",
+      []
+    ],
+    [
+      "esp:D5",
+      "led-red:A",
+      "gold",
+      []
+    ],
+    [
+      "esp:D2",
+      "led-green:A",
+      "cyan",
+      []
+    ],
+    [
+      "esp:D4",
+      "led-blue:A",
+      "purple",
+      []
+    ]
+  ],
+  "dependencies": {}
+}

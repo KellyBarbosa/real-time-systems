@@ -1,0 +1,127 @@
+{
+  "version": 1,
+  "author": "Kelly Barbosa",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "wokwi-esp32-devkit-v1",
+      "id": "esp",
+      "top": 0,
+      "left": 0,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn1",
+      "top": 98.21,
+      "left": -137.51,
+      "attrs": {
+        "bounce": "0",
+        "color": "red"
+      }
+    },
+    {
+      "type": "wokwi-potentiometer",
+      "id": "pot2",
+      "top": -11.97,
+      "left": -222.82,
+      "attrs": {}
+    }
+  ],
+  "connections": [
+    [
+      "esp:TX0",
+      "$serialMonitor:RX",
+      "",
+      []
+    ],
+    [
+      "esp:RX0",
+      "$serialMonitor:TX",
+      "",
+      []
+    ],
+    [
+      "esp:GND.1",
+      "led-red:C",
+      "black",
+      []
+    ],
+    [
+      "esp:GND.1",
+      "led-green:C",
+      "black",
+      []
+    ],
+    [
+      "esp:GND.1",
+      "led-blue:C",
+      "black",
+      []
+    ],
+    [
+      "esp:D5",
+      "led-red:A",
+      "purple",
+      []
+    ],
+    [
+      "esp:D2",
+      "led-green:A",
+      "blue",
+      []
+    ],
+    [
+      "esp:D4",
+      "led-blue:A",
+      "green",
+      []
+    ],
+    [
+      "btn1:2.r",
+      "esp:GND.2",
+      "black",
+      [
+        "h16.61",
+        "v23.93"
+      ]
+    ],
+    [
+      "pot2:VCC",
+      "esp:VIN",
+      "red",
+      [
+        "v101.91",
+        "h120.74",
+        "v0.06"
+      ]
+    ],
+    [
+      "pot2:GND",
+      "esp:GND.2",
+      "black",
+      [
+        "v92.05",
+        "h149.08",
+        "v0.42"
+      ]
+    ],
+    [
+      "pot2:SIG",
+      "esp:D33",
+      "green",
+      [
+        "v0"
+      ]
+    ],
+    [
+      "btn1:1.r",
+      "esp:D27",
+      "red",
+      [
+        "v0"
+      ]
+    ]
+  ],
+  "dependencies": {}
+}
